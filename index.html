@@ -9,9 +9,23 @@
 </head>
 
 <body>
-    <h1>Coding Quiz Challenge</h1>
-    <p>You will have one minute to complete the quiz. Keep in mind, for every inccorect answer submitted will result in ten seconds deducted from the timer.</p>
-    <button id="start">Start quiz</button>
-    <h3></h3>
+    <div class = "timer">
+        time: <span id = "time">60</span>
+    </div>
+    <div class="begin">
+        <h1>Coding Quiz Challenge</h1>
+        <p>You will have one minute to complete the quiz. Keep in mind, for every incorrect answer submitted will result in ten seconds deducted from the timer. Good luck!</p>
+        <button id="start">Start quiz</button>
+        <h3></h3>    
+    </div>
+
+    <div class = "quiz" style = "display:none">
+        <h1>Please answer the questions below.</h1>
+        <h2 id = "questionTitle"></h2>
+    <div id = "choices"></div>
+    </div>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
