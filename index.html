@@ -5,13 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Quiz</title>
-    <link rel="stylesheet" href = "./style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
-
+<header>
+    <div class="score" style="text-align:left">
+        <p>View high scores</p>
+    </div>
+    <div class="timer" style="text-align:right">
+        time: <span id="time">60</span>
+    </div>
+</header>
 <body>
-    <h1>Coding Quiz Challenge</h1>
-    <p>You will have one minute to complete the quiz. Keep in mind, for every inccorect answer submitted will result in ten seconds deducted from the timer.</p>
-    <button id="start">Start quiz</button>
-    <h3></h3>
+    <div class="begin" style="text-align:center">
+        <h1>Coding Quiz Challenge</h1>
+        <p>You will have one minute to complete the quiz. Keep in mind, for every incorrect answer submitted will result
+            in ten seconds deducted from the timer. Good luck!</p>
+        <button id="start">Start quiz</button>
+        <h3></h3>
+    </div>
+    <div class="quiz hide">
+        <h1>Please answer the questions below.</h1>
+        <h2 id="questionTitle"></h2>
+        <div class="btn-group" id="choices">
+            <!-- <ul style="list-style-type:none;">
+            <li><button>1</button></li>
+            <li><button>2</button></li>
+            <li><button>3</button></li>
+            <li><button>4</button></li>
+            </ul> -->
+        </div>
+    </div>
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+
 </body>
+
 </html>
