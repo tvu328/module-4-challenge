@@ -2,7 +2,7 @@ var index = 0
 var startbtn = document.querySelector("#start")
 var quizDiv = document.querySelector(".quiz")
 var timerEl = document.getElementById("time")
-var timeleft = 6
+var timeleft = 60
 
 function tick (){
     timeleft--
