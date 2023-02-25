@@ -4,6 +4,9 @@ var quizDiv = document.querySelector(".quiz")
 var scoresDiv = document.querySelector(".scores")
 var timerEl = document.getElementById("time")
 var timeleft = 60
+var submitbtn = document.getElementById("submitbtn")
+var initialsEl = document.getElementById("input")
+var time;
 
 function tick() {
     timeleft--
@@ -14,6 +17,7 @@ function tick() {
     timerEl.textContent = timeleft
 }
 function startgame() {
+    time = 60 
     setInterval(tick, 1000)
     var startDiv = document.querySelector(".begin")
     startDiv.classList.add("hide")
@@ -41,7 +45,6 @@ function askquestion() {
             if (index === questions.length) {
                 console.log("endgame")
                 quizDiv.classList.add("hide")
-                timeleft = 0
                 endgame()
             }
             else {
@@ -57,8 +60,9 @@ function incorrect() {
 }
 
 function endgame() {
+    time = timeleft
     scoresDiv.classList.remove("hide")
-    console.log("special")
+    console.log("time")
 }
 
 function saveHighscore() {
@@ -73,8 +77,9 @@ function saveHighscore() {
     };
     highscores.push(newScore);
     window.localStorage.setItem('highscores', JSON.stringify(highscores));
-    window.location.href = 'highscores.html';
+    // window.location.href = 'highscores.html';
 }
 
 
 startbtn.addEventListener("click", startgame)
+submitbtn.addEventListener("click", saveHighscore)
